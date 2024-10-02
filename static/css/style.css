@@ -2,6 +2,11 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: #7d3cff;
+}
+
 .continer {
     background-color: #fff;
     display: grid;
