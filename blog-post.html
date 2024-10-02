@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolg Post Details</title>
+    <link rel="stylesheet" href="static/css/blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="continer">
+        <!-- the top header begin -->
+        <div class="header">
+            <div class="top-header">
+                <div class="brand"><h1>Simple Blog Post</h1></div>
+                <div class="subs"><button class="btn">Subscribe</button></div>
+            </div>
+            <div class="nav-bar">
+                <ul class="nav">
+                    <li class="nav-item"><a href="index.html">Home</a></li>
+                    <li class="nav-item"><a href="#">Category</a></li>
+                    <li class="nav-item"><a href="#">About</a></li>
+                    <li class="nav-item"><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- the top herader ends -->
+
+        <!-- descriptin begin -->
+        <div class="description">
+            <h2 id="post-title">Corrupted Hard Drive? Python to the Rescue!</h2>
+            <p id="date">March 23, 2024</p>
+            <div class="post-image"></div>
+            <p>In today’s world of clouds and endless advanced backup solutions, storing your most precious projects on a simple external hard drive may sound a little outdated, but as I learned recently (against my will) it seems to still be musicians’ preferred choice.</p>
+            <h2>My (very specific) problem</h2>
+            <p>So I was in for an interesting weekend when one of my husband’s external hard drives just decided to croak. It also happened to be the one where he was storing all of his latest music projects, sound effects for his streams and something called “stems” that I’ve learned enables him to copyright his music. Not fun.</p>
+            <p>So to spare myself days of trying to comfort him over the loss of an entire year of work, I decided to dive head first and try to save as much of his data as possible — using conventional methods I researched on the Internet like the smart tech-y person that I am.</p>
+            <p>This quickly proved to be fruitless: the disk seems to be littered with random unreadable sectors that not only slow down beyond reason any kind of scanning poor Disk Drill or equivalent apps tried to do, but also any attempt of automated or manual backup was ultimately interrupted by the disk being randomly unmounted and re-mounted whenever a program hit a snag.</p>
+            <h2>The Python Solution</h2>
+            <p>Because of the very specific nature of the problem, I had to write a very specific script for the file backup, but parts of this solution may be useful for a fellow sufferer when all else fails.</p>
+            <p>Here’s the roadmap for my script:</p>
+            <h3><strong>1. Reproduce the directory tree in a backup iCloud directory</strong></h3>
+            <ul>
+                <li>choose a subset of folders to backup</li>
+                <li>for each found folder make a sibling in the backup location</li>
+                <li>keep a list of individual files with full paths from each found folder (to be copied in Step 2)
+                </li>
+                <li>save file list for future retrieval</li>
+            </ul>
+            <h3><strong>2. Copy each individual file to its sibling location on iCloud</strong></h3>
+            <ol>
+                <li>load file list</li>
+                <li>initialize a flags array to keep track of progress — helps if you still don’t know what errors you’re trying to catch and uncaught ones break the loop. Also great for future analysis of how much of the disk was saved vs lost.</li>
+                <li>try/except to copy each file, with updates to the flag array based on success or caught exceptions
+                </li>
+            </ol>
+        </div>
+        <!-- descriptin end -->
+
+        <!-- author begin -->
+        <div class="writter">
+
+        </div>
+        <!-- author end -->
+
+        <!-- related post begin -->
+        <div class="related">
+
+        </div>
+        <!-- related post end -->
+
+        <!-- footer begin -->
+        <footer>
+            <div>Copy Rights 2024</div>
+            <div>
+                Follow us
+                <a class="fa fa-twitter" href="#"></a>
+                <a class="fa fa-facebook" href="#"></a>
+                <a class="fa fa-linkedin" href="#"></a>
+            </div>
+        </footer>
+        <!-- footer end -->
+    </div>
+</body>
+</html>
